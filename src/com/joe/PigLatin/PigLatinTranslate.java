@@ -18,7 +18,9 @@ class PigLatinTranslate
             else {
                 parts += words[i].substring(1,2).toUpperCase();
             }
-            
+
+            /*TODO: Use regex to check for words that start with vowels to add "way" instead of "ay" at the end.*/
+
             parts += words[i].substring(2) + words[i].substring(0,1).toLowerCase() + "ay" + (i < words.length-1 ? " " : "");
             result += parts;
         }
