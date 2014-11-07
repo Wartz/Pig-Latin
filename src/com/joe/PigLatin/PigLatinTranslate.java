@@ -22,6 +22,9 @@ class PigLatinTranslate
             parts += words[i].substring(2) + words[i].substring(0,1).toLowerCase() + "ay" + (i < words.length-1 ? " " : "");
             result += parts;
         }
+
+        result = result.substring(0,1).toUpperCase() + result.substring(1).toLowerCase();
+
         return result;
     }
 }
