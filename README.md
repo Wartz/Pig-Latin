@@ -9,10 +9,12 @@ Requirements
 * Hamcrest core 1.3
 
 Setup
-=========\
+=========
+Place junit and hamcrest-core jars in a java CLASSPATH accessible directory.
 
 Credits
 =========
+Joe Schlimmer
 
 License
 =========
