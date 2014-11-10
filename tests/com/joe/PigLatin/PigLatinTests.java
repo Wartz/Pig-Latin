@@ -36,6 +36,18 @@ public class PigLatinTests {
     }
 
     @Test
+    public void testUppercase() {
+        test.setPigLatinTranslate("HELLO WORLD");
+        assertEquals("ELLOHAY ORLDWAY", test.getPigLatinTranslate());
+    }
+
+    @Test
+    public void testLowercase() {
+        test.setPigLatinTranslate("hello world");
+        assertEquals("ellohay orldway", test.getPigLatinTranslate());
+    }
+
+    @Test
     public void testEmpty() {
         test.setPigLatinTranslate("");
         assertEquals("You wrote nothing", test.getPigLatinTranslate());
