@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
  * Created by Joseph on 11/7/2014.
  * Pig Latin Translator Test Class
  */
+
 public class PigLatinTests {
     PigLatinTranslate test = new PigLatinTranslate();
 

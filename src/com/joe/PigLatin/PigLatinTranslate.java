@@ -4,24 +4,32 @@ package com.joe.PigLatin;
  * Created by Joseph on 11/7/2014.
  * Pig Latin Translator Core Class
  */
+
 class PigLatinTranslate
 {
     String phrase;
 
-    //Constructor
     public PigLatinTranslate() {
     }
 
-    //Setter
+    /**
+     * @param p - p sets the word(s)/phrase to translate into Pig Latin
+     */
     public void setPigLatinTranslate(String p) {
         this.phrase = p;
     }
 
-    //Setter
+    /**
+     * @return English words/phrase translated into Pig Latin
+     */
     public String getPigLatinTranslate() {
         return this.translateToPL(phrase);
     }
 
+    /**
+     * @param phrase carries in the English word/phrase to be translated
+     * @return Translates English words/phrases into Pig latin
+     */
     private String translateToPL(String phrase) {
         String[] words = phrase.split(" ");
         String result = "";

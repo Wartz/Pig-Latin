@@ -8,6 +8,7 @@ import org.junit.runner.notification.Failure;
  * Created by Joe Schlimmer
  * Pig Latin Translator Main Class
  */
+
 public class PigLatinRun {
     public static void main (String[] args) {
 
