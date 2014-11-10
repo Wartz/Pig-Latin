@@ -13,22 +13,22 @@ class PigLatinTranslate
     }
 
     /**
-     * @param p - p sets the word(s)/phrase to translate into Pig Latin
+     * @param p is the word(s) or phrase to translate into Pig Latin.
      */
     public void setPigLatinTranslate(String p) {
         this.phrase = p;
     }
 
     /**
-     * @return English words/phrase translated into Pig Latin
+     * @return English words/phrase translated into Pig Latin.
      */
     public String getPigLatinTranslate() {
         return this.translateToPL(phrase);
     }
 
     /**
-     * @param phrase carries in the English word/phrase to be translated
-     * @return Translates English words/phrases into Pig latin
+     * @param phrase is the English word/phrase to be translated.
+     * @return English words/phrase translated into Pig Latin.
      */
     private String translateToPL(String phrase) {
         String[] words = phrase.split(" ");
