@@ -7,6 +7,7 @@ import org.junit.runner.notification.Failure;
 /**
  * Created by Joseph on 11/10/2014.
  * com.joe.PigLatin
+ * Pig Latin Translator Test Runner Class
  */
 public class PigLatinTestsRun {
     public void run() {
