@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
  */
 
 public class PigLatinTests {
-    PigLatinTranslate test = new PigLatinTranslate();
+    private final PigLatinTranslate test = new PigLatinTranslate();
 
     @Test
     public void testBasic() {

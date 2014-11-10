@@ -7,9 +7,10 @@ package com.joe.PigLatin;
 
 class PigLatinTranslate
 {
-    String phrase;
+    private String phrase;
 
     public PigLatinTranslate() {
+
     }
 
     /**

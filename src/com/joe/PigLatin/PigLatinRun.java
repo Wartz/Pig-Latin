@@ -6,7 +6,7 @@ package com.joe.PigLatin;
  * Pig Latin Translator Main Class
  */
 
-public class PigLatinRun {
+class PigLatinRun {
     public static void main (String[] args) {
 
         PigLatinTranslate translate = new PigLatinTranslate();

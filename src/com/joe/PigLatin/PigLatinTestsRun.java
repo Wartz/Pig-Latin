@@ -9,7 +9,8 @@ import org.junit.runner.notification.Failure;
  * com.joe.PigLatin
  * Pig Latin Translator Test Runner Class
  */
-public class PigLatinTestsRun {
+
+class PigLatinTestsRun {
     public void run() {
         Result testResult = JUnitCore.runClasses(PigLatinTests.class);
 
