@@ -2,10 +2,27 @@ package com.joe.PigLatin;
 
 /**
  * Created by Joseph on 11/7/2014.
+ * Pig Latin Translator Core Class
  */
 class PigLatinTranslate
 {
-    public static String translateToPL(String phrase) {
+    String phrase;
+
+    //Constructor
+    public PigLatinTranslate() {
+    }
+
+    //Setter
+    public void setPigLatinTranslate(String p) {
+        this.phrase = p;
+    }
+
+    //Setter
+    public String getPigLatinTranslate() {
+        return this.translateToPL(phrase);
+    }
+
+    private String translateToPL(String phrase) {
         String[] words = phrase.split(" ");
         String result = "";
         
