@@ -9,10 +9,6 @@ class PigLatinTranslate
 {
     private String phrase;
 
-    public PigLatinTranslate() {
-
-    }
-
     /**
      * @param p is the word(s) or phrase to translate into Pig Latin.
      */
@@ -25,6 +21,17 @@ class PigLatinTranslate
      */
     public String getPigLatinTranslate() {
         return this.translateToPL(phrase);
+    }
+
+    /**
+     * @param text is the translated text to be formatted with capitalization/punctuation, etc
+     * @return a capitalized/punctuated word or phrase.
+     */
+    private String formatText(String text) {
+        /*TODO: Look into figuring out how to capitalize proper nouns, etc*/
+        text = text.substring(0,1).toUpperCase() + text.substring(1).toLowerCase();
+
+        return text;
     }
 
     /**
@@ -53,9 +60,7 @@ class PigLatinTranslate
             result += parts;
         }
 
-        /*TODO: Look into figuring out how to capitalize proper nouns, etc*/
-        //Formats a word or phrase to be capitalized.
-        result = result.substring(0,1).toUpperCase() + result.substring(1).toLowerCase();
+        result = this.formatText(result);
 
         return result;
     }
