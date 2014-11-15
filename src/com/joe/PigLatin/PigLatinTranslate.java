@@ -30,8 +30,18 @@ class PigLatinTranslate
     private String formatText(String text) {
         /*TODO: Look into figuring out how to capitalize proper nouns, etc*/
         text = text.substring(0,1).toUpperCase() + text.substring(1).toLowerCase();
-
+        text = this.formatPunctuation(text);
         return text;
+    }
+
+    private String formatPunctuation(String text) {
+        String pattern = "\\p{Punct}";
+        text = text.replaceAll(pattern, "");
+        return text;
+    }
+
+    private Boolean isNotEmpty(String text) {
+        return (text != null && text.length() > 0);
     }
 
     /**
@@ -41,12 +51,23 @@ class PigLatinTranslate
     private String translateToPL(String phrase) {
         String[] words = phrase.split(" ");
         String result = "";
-        
+
+
+        if (!isNotEmpty(phrase)) {
+            result = "You wrote nothing";
+            return result;
+        }
+
         for(int i=0; i < words.length; i++) {
             String parts = "";
 
             if (words[i].toLowerCase().equals(words[i])) {
-                parts += words[i].substring(1,2);
+                try {
+                    parts += words[i].substring(1,2);
+                } catch(StringIndexOutOfBoundsException e) {
+                    result = ("You wrote nothing");
+                    return result;
+                }
             }
             else {
                 parts += words[i].substring(1,2).toUpperCase();

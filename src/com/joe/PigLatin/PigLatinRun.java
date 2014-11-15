@@ -8,7 +8,7 @@ package com.joe.PigLatin;
 class PigLatinRun {
     public static void main (String[] args) {
         PigLatinTranslate translate = new PigLatinTranslate();
-        translate.setPigLatinTranslate("hello nerds, how are you");
+        translate.setPigLatinTranslate("Hello");
         System.out.println(translate.getPigLatinTranslate());
     }
 }
