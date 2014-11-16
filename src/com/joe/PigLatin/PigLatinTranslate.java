@@ -27,18 +27,7 @@ class PigLatinTranslate
      * @param text is the translated text to be formatted with capitalization/punctuation, etc
      * @return a capitalized/punctuated word or phrase.
      */
-    private String formatText(String text) {
-        /*TODO: Look into figuring out how to capitalize proper nouns, etc*/
-        text = text.substring(0,1).toUpperCase() + text.substring(1).toLowerCase();
-        text = this.formatPunctuation(text);
-        return text;
-    }
 
-    private String formatPunctuation(String text) {
-        String pattern = "\\p{Punct}";
-        text = text.replaceAll(pattern, "");
-        return text;
-    }
 
     private Boolean isNotEmpty(String text) {
         return (text != null && text.length() > 0);
@@ -80,8 +69,6 @@ class PigLatinTranslate
             parts += words[i].substring(2) + words[i].substring(0,1).toLowerCase() + "ay" + (i < words.length-1 ? " " : "");
             result += parts;
         }
-
-        result = this.formatText(result);
 
         return result;
     }
