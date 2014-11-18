@@ -23,8 +23,7 @@ class PigLatinFormatText {
 
     private String formatPunctuation(String text) {
         String pattern = "\\p{Punct}";
-        text = text.replaceAll(pattern, "");
-        return text;
+        return  text.replaceAll(pattern, "");
     }
 
     private String formatCapitalization(String text) {
