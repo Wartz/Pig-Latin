@@ -17,11 +17,6 @@ class PigLatinRun {
         translate.setPigLatinTranslate(text);
         text = translate.getPigLatinTranslate();
 
-
-        PigLatinFormatText format = new PigLatinFormatText();
-        format.setFormattedText(text);
-        text = format.getFormattedText();
-
         System.out.println(text);
     }
 }

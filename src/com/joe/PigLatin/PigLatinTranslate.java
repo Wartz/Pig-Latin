@@ -70,7 +70,9 @@ class PigLatinTranslate
             result += parts;
         }
 
-        return result;
+        PigLatinFormatText format = new PigLatinFormatText();
+        format.setFormattedText(result);
+        return format.getFormattedText();
     }
 }
 
